@@ -1,0 +1,4 @@
+BrowserRouter = It enables routing in React application.
+Routes = It contains all application routes.
+Route = Maps URL to the Component
+Link = Navigates between pages

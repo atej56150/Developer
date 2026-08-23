@@ -1,0 +1,8 @@
+Simple Meaning :-
+Rest = Collect multiple values into one variable.
+Rest parameter must be the last parameter.
+
+Rest is commonly used in:
+Function parameters
+Array destructuring
+Object destructuring

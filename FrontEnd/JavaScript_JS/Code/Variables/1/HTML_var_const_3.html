@@ -1,0 +1,23 @@
+<!-- function {} scope -->
+
+<html>
+<head>
+   <title> Variable hoisting </title>
+</head>
+<body>
+   <script>
+      function test() {
+        // Hoisiting is not supported by const keyword
+        // m = 100;
+        // document.write("m = " + m + "<br/>");
+        // const m;
+        
+        n = 50;
+        document.write("n = " + n + "<br/>");
+        var n;
+      
+      }
+      test();
+   </script>
+</body>
+</html>

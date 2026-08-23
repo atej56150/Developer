@@ -1,0 +1,4 @@
+Object is a collection of data stored as key-value pairs.
+
+Object → key-value data
+Object :- { name: "Arun", age: 25 }

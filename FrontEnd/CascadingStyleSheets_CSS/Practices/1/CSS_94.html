@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>CSS Menu</title>
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .amazon{
+                background: red;
+                padding: 10px 0px;
+                text-align: center;
+            }
+            .leftblock img{
+                width: 100%;
+                height: 60%;
+            }
+            .leftblock, .rightblock, .rewards, .category, .block{
+                display: inline-block;
+                vertical-align: top;
+                width: 49%;
+            }
+            .rewards, .category, .block{
+                border: 5px solid;
+                padding: 6px;
+            }
+            .rewards h3, .category h3{
+                text-align: center;
+            }
+            .rewards, .category{
+                background-color: aqua;
+            }            
+            .category{
+                margin-left: 10px;
+            }
+            .block{
+                padding: 20px 10px;
+            }
+            .block p{
+                text-align: center;
+            }
+            .block img{
+                padding: 10px;
+            }
+            .leftblock{
+                background: url('TomCruise.jpg') no-repeat;
+                height: 450px;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="amazon">
+            <div class="amazon">
+                <div class="leftblock">
+                    <h1>Welcome to HTML with CSS</h1>
+                </div>
+                <div class="rightblock">
+                    <div class="rewards">
+                        <h1>Shop & Pay | Earn rewards daily</h1>
+                        <div class="block">
+                            <img src="CSS_92.png" />
+                            <p><a href="">Fresh</a></p>
+                        </div>
+                        <div class="block">
+                            <img src="CSS_92.png" />
+                            <p><a href="">Fresh</a></p>                            
+                        </div>
+                        <div class="block">
+                            <img src="CSS_92.png" />
+                            <p><a href="">Fresh</a></p>                            
+                        </div>
+                        <div class="block">
+                            <img src="CSS_92.png" />
+                            <p><a href="">Fresh</a></p>                            
+                        </div>
+                    </div>
+                    <div class="category">
+                        <h1> Shop by category</h1>
+                        <div class="block">
+                            <img src="CSS_92.png" />
+                            <p><a href="">Fresh</a></p>                            
+                        </div>
+                        <div class="block">
+                            <img src="CSS_92.png" />
+                            <p><a href="">Fresh</a></p>                            
+                        </div>
+                        <div class="block">
+                            <img src="CSS_92.png" />
+                            <p><a href="">Fresh</a></p>                            
+                        </div>
+                        <div class="block">
+                            <img src="CSS_92.png" />
+                            <p><a href="">Fresh</a></p>                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

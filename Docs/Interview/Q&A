@@ -1,0 +1,67 @@
+● Backend
+On the backend, I have 3 years of experience working with Node.js, Express.js, and MongoDB.
+I have built RESTful APIs for user login/signup with JWT, product listing, cart management, wishlist handling, order processing.
+I design MongoDB schemas for users, products, orders, and transactions, ensuring data is validated and fast to access.
+I also create secure admin routes and sometimes work on optimizing database queries or error handling.
+Apart from my main tasks, I also help with code reviews, improving application security, and documenting technical features for the team.
+Overall, I work on both frontend and backend, focusing on building efficient, user-friendly, and scalable web applications. This is a brief introduction about me.
+
+● Can you describe your current team structure ?
+I am working as a ReactJS developer in my current team.
+In our project, we have a good team setup that follows the Agile model. 
+Our team has around 10 members in total.
+On the frontend side, we are 4 developers including myself — one Team Lead, two senior React developers, and me as a developer. 
+On the backend side, we have 3 developers who work mostly with Node.js and APIs. 
+We also have a QA team with 2 testers, who make sure everything works well before release. 
+Apart from that, we have a Scrum Master who handles the daily stand-ups, sprint planning, and overall process management.
+We all work closely together, follow sprint cycles, attend daily meetings, and discuss the tasks and blockers.
+
+● Explain about your E-Commerce Project ?
+I worked on a ReactJS e-commerce application using ReactJS, NodeJS, MongoDB, AWS, S3, Redux, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, and Material UI.
+Then added important features like product listing, a shopping cart with Redux Toolkit, user authentication, order management, and payment integration.
+For product listing, I built a dynamic product catalog using ReactJS and MongoDB, where products were fetched from the database and displayed with filters and sorting options. 
+To improve performance, I used pagination and infinite scrolling with React Query.
+The shopping cart was implemented using Redux Toolkit, ensuring efficient state management, allowing users to add, remove, and update items while persisting the cart state across sessions. 
+For user authentication, I used JWT authentication with NodeJS and MongoDB, enabling secure login, signup, and role-based access control (RBAC) for admin and customers.
+For order management, I built a dashboard using Material UI and Tailwind CSS, where customers could track their orders and admins could update order statuses. 
+I used AWS S3 to store product images efficiently, reducing backend load.
+For payment integration, I implemented Stripe API, ensuring secure transactions with tokenized payments.
+To make the app faster, I used lazy loading with React.lazy() and Suspense to load components only when needed.
+I also optimized performance using memoization (useMemo() and React.memo()) to prevent unnecessary re-renders and managed global state effectively with Redux Toolkit. 
+For security, I enforced HTTPS, rate limiting with Express, and CSRF protection, while securely storing credentials in .env files.
+I also implemented JWT-based authentication for secure API requests.
+
+● Agile Methodology
+In my project, we followed Agile methodology, and I actively participated in all Agile ceremonies like daily stand-ups, sprint planning, retrospectives, and demos, we followed a 2-week sprint cycle, where I participated in various ceremonies. 
+We had daily stand-ups (15 minutes) to share progress and discuss blockers. 
+Sprint planning (1-2 hours, at the beginning of the sprint) helped us break down React features into tasks and assign story points.
+Sprint reviews (1-2 hours, at the end of the sprint) allowed me to demo completed UI components and get feedback. 
+Sprint retrospectives (1 hour, at the end of the sprint) helped us discuss what went well and what could be improved.
+Code reviews happened continuously during the sprint, usually before merging a feature branch. 
+In a month, we typically had two sprint reviews and two retrospectives.
+GitHub for Repository, AZO(AZURE DEVOPS DASHBOARD PAGE FOR TICKETS).
+
+● Can you explain how you used Azure DevOps (ADO) to manage sprint planning, task tracking, and collaboration in our previous ReactJS project ?
+In my previous ReactJS project, we actively used Azure DevOps (ADO) Board Page for managing sprint planning, task tracking, and overall Agile process management. 
+Our Scrum Master handled sprint creation and backlog grooming, breaking high-level requirements into Epics, then dividing them into Features, User Stories, and finally detailed Tasks.
+For example, when we planned the Shopping Cart module, it was created as a Feature under the “Shopping Experience” Epic. 
+Inside that, we created User Stories like designing the cart component UI, integrating add-to-cart functionality, quantity updates using useReducer, applying discount coupons via API, and handling cart item removal. 
+These User Stories were then split into Tasks and assigned to developers like me. 
+On the ADO Board page, we had different Boards and Backlogs views to see work items organized by status like To Do, In Progress, and Done, and we could drag and drop work items across columns as their status changed.
+We also used the Queries feature to create custom filtered views, like viewing only my tasks or seeing all pending bugs for a particular sprint.
+
+● Project Floder Structure
+The project using a feature-based folder structure, where each feature like products, cart, checkout, and user will have its own folder with separate files for components, APIs, styles, and test cases. 
+I will also include shared folders like components, hooks, utils, and services to store reusable code and avoid duplication. 
+This structure will help keep the code easy to understand and maintain as the app grows.
+For responsive design, I will use Material-UI (MUI) and Chakra UI, which are modern UI libraries that support responsive layouts out of the box.
+
+● Optimization Techniques in React
+In our React application, we used several simple techniques to make it faster and more efficient. 
+We applied code splitting with React.lazy() and React.Suspense, and used memoization tools like React.memo(), useMemo(), and useCallback() to avoid unnecessary re-renders. 
+We avoided anonymous functions in JSX, used proper keys in lists, and preferred CSS classes over inline styles. 
+To handle large data, we used virtualization with react-window, lazy-loaded images, and managed state updates in batches. 
+We also used debounce and throttle for fast events like search or resize, for faster page loads. 
+We carefully used context and reused components. 
+For displaying large lists, we implemented infinite scroll, windowing, and pagination based on the situation. 
+These methods helped us keep the app smooth, fast, and user-friendly.

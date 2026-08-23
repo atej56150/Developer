@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Form Elements</title>
+    </head>
+    <body>
+        <h1>From Elements</h1>
+        <form action="save.php">
+
+            <select name="State" id="state">
+                <option>---Select State---</option>
+                <option value="AndhraPradesh">AndhraPradesh</option>
+            </select>
+
+            <br/><br/>
+
+            <label>Gender</label>
+            <label><input type="radio" name="gender" /> Male </label>
+            <label><input type="radio" name="gender" /> FeMale </label>
+
+            <br /><br />            
+
+            <input name="uname" id="name" type="text" min="10" max="20" placeholder="UserName" />
+
+            <br><br>
+
+            <label>Hobbies</label>
+            <label><input type="checkbox" name="hobbies" />Movies</label>
+            <label><input type="checkbox" name="hobbies" />Coding</label>
+            <label><input type="checkbox" name="hobbies" />Food</label>
+
+            <br><br/><br />
+
+            <input type="submit" />
+            <input type="submit" value="Register" />
+
+        </form>
+    </body>
+</html>

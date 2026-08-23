@@ -1,0 +1,2 @@
+Void is used where there is no data. 
+For example, if a function does not return any value then you can specify Void as return type.

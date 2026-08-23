@@ -1,0 +1,32 @@
+Both document.write() and console.log() are JavaScript methods used for displaying output.
+But they serve different purposes and display their output in different locations within a web development environment. 
+
+document.write()
+----------------
+Purpose:- 
+Primarily used to display text or HTML content directly onto the web page itself.
+Then modifying the page's structure and what users see.
+Output Location:- 
+The output is visible on the web page within the browser window.
+Interaction with the DOM:- 
+It directly manipulates the Document Object Model (DOM), altering the structure and content of the webpage.
+
+console.log()
+-------------
+Purpose:- 
+Primarily used by developers for debugging, testing code, and inspecting data in the browser's developer console.
+Output Location:- 
+The output is displayed in the browser's developer console and is generally not visible to end-users.
+Only visible in the browser's developer tools (F12 → Console).
+Interaction with the DOM:- 
+It does not directly read, write, modify, or update the DOM.
+Advantages:-
+It provides a valuable tool for tracking the flow of code, checking variable values, and understanding how the program behaves without affecting the user's experience on the web page.
+Does not modify the webpage.
+It supports multiple various log levels (console.warn(), console.error(), console.info()) for more meaningful debugging messages.
+When to use:-
+For debugging and testing JavaScript code.
+To inspect variable values, function outputs, and data structures at runtime.
+To track function calls and their arguments.
+To monitor the performance of code blocks.
+To inspect DOM elements and their properties in web development. 

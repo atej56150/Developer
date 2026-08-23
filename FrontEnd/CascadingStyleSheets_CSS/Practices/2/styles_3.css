@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    padding: 5px;
+}
+
+#header{
+    background: #c49c18;
+    border-bottom: 10px solid red;
+}
+
+.header{
+    width: 88%;
+    margin: 0% auto;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li {
+    list-style-type: none;
+    padding: 10px 20px;
+}
+
+.menu li a{
+    color: #666
+}
+
+.menu li:hover{
+    background-color: orange;
+    border-radius: 15px 10em 10%;
+}

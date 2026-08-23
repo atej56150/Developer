@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title> CSS Transformations </title>
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            #header{
+                background: #eee;
+                padding: 100px;
+            }
+            .header{
+                height: 100px;
+                width: 100px;
+                background: #fff;
+                border: 2px solid #333;
+                animation-name: myanim;
+                animation-duration: 30s;
+            }
+
+            @keyframes myanim
+            {
+                from{
+                    background: green;
+                }
+                to{
+                    background: red;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div class="header">
+
+            </div>
+        </header>
+    </body>
+</html>

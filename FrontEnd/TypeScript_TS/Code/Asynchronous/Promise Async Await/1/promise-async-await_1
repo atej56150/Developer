@@ -1,0 +1,6 @@
+Why do we need async ?
+Using .then() works, but when you have many asynchronous operations, the code can become difficult to read.
+An async function always returns a Promise.
+
+Why do we need await ?
+Wait for this Promise to finish, then give me its result.

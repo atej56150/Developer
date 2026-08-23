@@ -1,0 +1,7 @@
+Array is a collection of multiple values stored in a single variable, and each value is accessed using an index starts from 0.
+Array is a collection of multiple values stored in a single variable.
+Array index starts from 0.
+
+Array → collection of values
+Array of String :- ["Arun", "Rahul"]
+Array of Number :- [10, 20, 30]

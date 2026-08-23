@@ -1,0 +1,24 @@
+After creating the project, will see something like :-
+PROJECT_FOLDER_NAME
+│
+├── node_modules
+│
+├── public
+│
+├── src
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── index.html
+├── package.json
+└── vite.config.js
+
+The most important files for now are :-
+index.html → This contains the root HTML element
+     ↓
+main.jsx → It tells React to render the App component
+     ↓
+App.jsx →
+     ↓
+Components

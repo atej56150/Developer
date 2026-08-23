@@ -1,0 +1,40 @@
+Suppose we have three users :-
+Arun
+John
+David
+
+Instead of creating three different components, create one reusable UserCard.
+
+Look at this :-
+<UserCard
+  name="Arun"
+  role="React Developer"
+  location="Sydney"
+/>
+
+The data goes into the component as "Props".
+
+Inside :-
+function UserCard(props) { ... }
+
+we receive those props.
+
+Then :-
+props.name
+props.role
+props.location
+
+give us the values.
+
+So :-
+App
+ ↓
+UserCard
+ ↓
+props
+ ↓
+name
+role
+location
+ ↓
+UI

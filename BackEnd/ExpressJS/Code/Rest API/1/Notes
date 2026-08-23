@@ -1,0 +1,6 @@
+[Initialize a Node]
+npm init -y
+npm install express
+
+[Start the server]
+node FILENAME.js

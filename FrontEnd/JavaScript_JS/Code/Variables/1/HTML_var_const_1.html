@@ -1,0 +1,22 @@
+<!-- function {} scope -->
+
+<html>
+<head>
+   <title> Variable declaration </title>
+</head>
+<body>
+   <script>
+		function test() {
+			const bool = true;
+			if (bool) {
+				const x = 30;
+				var y = 40;
+				document.write("x = " + x + ", y = " + y + "<br/>");
+			}
+			// x can't be accessible here
+			document.write("y = " + y + "<br/>");
+		}
+		test();
+   </script>
+</body>
+</html>

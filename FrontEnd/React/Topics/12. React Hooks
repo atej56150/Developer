@@ -1,0 +1,37 @@
+----------
+● useState
+----------
+useState is used to store and update data inside a React component.
+
+syntax :- const [state, setState] = useState(initialValue);
+state → State Value
+setState → Setter Function
+initialValue → Initial/Starting Value
+
+so 'state' and 'setState' are not fixed names.
+choose the different names for examples given below :-
+const [name, setName] = useState("Arun");
+const [age, setAge] = useState(25);
+const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+Very commonly used for:
+Form input values
+Counter
+Modal open/close
+Checkbox
+Dropdown
+Login form
+Loading state
+API data
+
+-----------
+● useEffect
+-----------
+useEffect is used when you need to perform a side effect after React renders.
+
+A side effect is something like:
+API call
+Timer
+Event listener
+Browser document title
+Subscription

@@ -1,0 +1,91 @@
+<html>  
+    <head>  
+        <title>Welcome to HTML_CSS</title>  
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+
+/*            
+            .logo{
+                display: inline-block;
+            }
+            .mainmenu{
+                display: inline-block;
+            }
+            .menu li {
+                display: inline-block;
+            }
+*/
+
+            .logo, .mainmenu, .menu li {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .menu li{
+                padding: 10px 20px;
+            }
+            .menu li a{
+                text-decoration: none;
+                color: #af0606
+            }
+            #header{
+                background: blue;
+            }
+            .header{
+                width: 80%;
+                margin: 10px auto;
+            }
+            .menu li:hover{
+                background-color: #eb5d11;
+                border-radius: 5px;
+            }
+            .context{
+                padding: 10px;
+                display: none;
+                position: absolute;
+                background-color: #333;
+            }
+            .context li{
+                display: block;
+                padding: 15px;
+            }
+            .menu li:hover .context{
+                display: block;
+            }
+            .menu li:hover a{
+                color: black;
+            }
+        </style>
+    </head>  
+    <body> 
+        <header id="header">
+            <div class="header">
+                <div class="logo">
+                    <img src="Google.jpg" />
+                </div>
+                <div class="mainmenu">
+                    <ul class="menu">
+                        <li>
+                            <a href="">Home <i class="fa fa-caret-down"></i></a>
+                            <ul class="context">
+                                <li><a href="">online</a></li>
+                                <li><a href="">offline</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">About</a></li>
+                        <li>
+                            <a href="">Careers <i class="fa fa-caret-down"></i></a>
+                            <ul class="context">
+                                <li><a href="">Sing-Up</a></li>
+                                <li><a href="">Login</a></li>
+                            </ul>                            
+                        </li>
+                        <li><a href="">Contact_US</a></li>
+                        <li>Form</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

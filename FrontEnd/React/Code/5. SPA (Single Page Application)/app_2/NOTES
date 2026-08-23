@@ -1,0 +1,22 @@
+Now your application has 3 URLs :-
+http://localhost:5173/
+http://localhost:5173/about
+http://localhost:5173/contact
+
+[Flow]
+Suppose you click :- About
+The flow is :-
+User clicks About
+        ↓
+<Link to="/about">
+        ↓
+URL changes to /about
+        ↓
+<Routes> checks the routes
+        ↓
+Finds:
+<Route path="/about" element={<About />} />
+        ↓
+About component loads
+        ↓
+<h1>About Page</h1>
