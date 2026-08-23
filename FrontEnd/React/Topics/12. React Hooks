@@ -1,0 +1,119 @@
+----------
+● useState
+----------
+useState → Value change అయితే re-render.
+State ని నేరుగా update చేస్తాం.
+
+useState is used to store and update data inside a React component.
+It used for Simple state management.
+Updating the state triggers a re-render.
+
+syntax :- const [state, setState] = useState(initialValue);
+state → State Value = state is the current value stored by React.
+setState → Setter Function = setState is the setter function used to update/change the state value.
+initialValue → Initial/Starting Value.
+
+so 'state' and 'setState' are not fixed names.
+choose the different names for examples given below :-
+const [name, setName] = useState("Arun");
+const [age, setAge] = useState(25);
+const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+Very commonly used for:
+- Form input values
+- Counter
+- Modal open/close
+- Checkbox
+- Dropdown
+- Login form
+- Loading state
+- API data
+
+-----------
+● useEffect
+-----------
+React component లో ఉన్న JSX ద్వారా UI screen మీద కనిపించే content render అయిన తర్వాత, API calls చేయడానికి, timers run చేయడానికి లేదా ఇతర side effects నిర్వహించడానికి useEffect Hook ఉపయోగిస్తాం.
+
+useEffect is used when you need to perform a side effect after React renders.
+
+Very commonly used for:
+- API call
+- Timer
+- Event listener
+- Browser document title
+- Subscription
+
+--------
+● useRef
+--------
+React component re-render కాకుండా ఒక value ను store చేసి గుర్తుంచుకోవడానికి లేదా input box లాంటి HTML element ను direct గా access చేయడానికి useRef Hook ఉపయోగిస్తాం.
+useRef → Value change అయినా re-render కాదు.
+
+useRef is a React Hook used to store values between renders without causing the component to re-render when the value changes.
+It helps us remember a value without re-rendering the component.
+useRef is used to remember a value without re-rendering + access DOM.
+1. Access a DOM element directly
+2. Store a value without causing a re-render
+Updating the ref does not trigger a re-render.
+
+Very commonly used for:
+- Focus input
+- Access DOM element
+- Store timer ID
+- Store previous value
+- Store mutable value that shouldn't trigger rendering
+
+------------
+● useContext
+------------
+It allows components to share data without passing props through every level.
+This solves prop drilling.
+
+Very commonly used for:
+- Logged-in user
+- Theme
+- Language
+- Authentication information
+- Application settings
+
+------------
+● useReducer
+------------
+useReducer అనేది React లో state management కోసం ఉపయోగించే Hook. 
+దీన్ని ఉపయోగించి మనం component లోని state ని manage చేయవచ్చు.
+dispatch ద్వారా actions పంపుతాం, reducer function ఆ actions ఆధారంగా కొత్త state ని return చేస్తుంది. 
+dispatch అనేది reducer function కి action ని పంపడానికి ఉపయోగించే function.
+Complex state management కోసం ఇది ఉపయోగపడుతుంది.
+ముఖ్యంగా state changes కొంచెం complex గా ఉన్నప్పుడు ఇది ఉపయోగపడుతుంది.
+
+సింపుల్‌గా చెప్పాలంటే, useState లాగే useReducer కూడా state ని manage చేస్తుంది. 
+కానీ state ని మార్చడానికి మనం ఒక reducer function ఉపయోగిస్తాం (OR) State update logic ఒక reducer function లో ఉంటుంది.
+Reducer ద్వారా state update చేస్తాం.
+
+useReducer is a React Hook used to manage component state. 
+It works with a reducer function and dispatch function. 
+We dispatch actions, and the reducer function returns the next state (updated value) based on the action. 
+So dispatch is a function is used to send actions to the reducer function to update the state (updated value). 
+The new updated state value replaces the current state value.
+It is useful when state management logic becomes complex OR when multiple actions update the same state.
+
+It is useful when state logic becomes complex.
+It manage complex state logic / Complex state management using actions.
+
+syntax :- const [state, dispatch] = useReducer(reducer, initialState);
+state → Current state value, Similar to state in useState.
+dispatch → Sends an action to the reducer, Similar in purpose to setState in useState.
+reducer → Function that handles state updates based on actions.
+initialState → Initial state value.
+
+Very commonly used for:
+- Complex Forms: Form values, validation errors, submit status.
+- Shopping cart: Add item, remove item, update quantity.
+- Multi-step Forms: Next step, previous step, reset.
+- Complex UI state
+- State with many actions
+
+------
+● NOTE
+------
+useState uses a setter function (setState), whereas useReducer uses a dispatch function (dispatch) to send actions to the reducer.

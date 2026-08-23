@@ -1,0 +1,38 @@
+React applications are generally built using components.
+
+For example, imagine an e-commerce website :-
+App
+ |
+ ├── Header
+ |
+ ├── ProductList
+ │      |
+ │      ├── Product
+ │      ├── Product
+ │      └── Product
+ |
+ └── Footer
+
+Each part can be a separate React component.
+
+Simple Example :- Architecture Code
+
+React renders Output for Architecture.jsx :-
+My Website
+Laptop - $1000
+Copyright 2026
+
+Why Components ?
+Instead of writing everything in one huge file : App.jsx → 1000 lines
+
+we divide it :-
+Header.jsx
+Product.jsx
+Footer.jsx
+App.jsx
+
+This makes the application :-
+Reusable
+Maintainable
+Easy to understand
+Easy to test

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title> CSS Transformations </title>
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            #header{
+                background: #eee;
+                padding: 100px;
+            }
+            .header{
+                height: 100px;
+                width: 100px;
+                background: #fff;
+                border: 2px solid #333;
+                animation-name: myanim;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes myanim
+            {
+                from{
+                    background: green;
+                    transform: translateX(0px);
+                }
+                to{
+                    background: red;
+                    transform: translateX(400px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div class="header">
+
+            </div>
+        </header>
+    </body>
+</html>

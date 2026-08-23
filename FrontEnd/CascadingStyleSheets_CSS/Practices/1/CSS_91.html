@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>CSS Menus</title>
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .about{
+                background: #f86666;
+                padding: 10px;
+            }
+            .about, .rightblock {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            .leftblock, .rightblock{
+                flex: 50%;
+            }
+            .block {
+                display: flex;  
+                flex: 40%;
+                padding: 40px;
+                box-shadow: 2px 2px 10px #333; 
+                margin: 20px;
+            }
+            .leftblock img, .block img {
+                width: 50px;  
+                height: auto;
+            }
+            .leftblock img{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="about">
+            <div class="about">
+                <div class="leftblock">
+                    <img src="TomCruise.jpg" />
+                </div>
+                <div class="rightblock">
+                    <div class="block">
+                        <img src="Google.jpg" />
+                        <h1>Some title will come here...!</h1>
+                    </div> 
+                    <div class="block">
+                        <img src="Google.jpg" />
+                        <h1>Some title will come here...!</h1>
+                    </div>
+                    <div class="block">
+                        <img src="Google.jpg" />
+                        <h1>Some title will come here...!</h1>
+                    </div>
+                    <div class="block">
+                        <img src="Google.jpg" />
+                        <h1>Some title will come here...!</h1>
+                    </div>
+                    <div class="block">
+                        <img src="Google.jpg" />
+                        <h1>Some title will come here...!</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

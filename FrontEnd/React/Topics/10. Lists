@@ -1,0 +1,151 @@
+● map()
+It takes every item from an array and returns something for each item in the UI.
+Array values → map() → JSX elements → React renders them → UI
+
+● Keys
+When React renders a collection, every item should have a unique key.
+It is uniquely identifies each list item for React.
+
+Example :-
+{employees.map((employee) => (
+  <div key={employee.id}>
+    <h3>{employee.name}</h3>
+    <p>{employee.role}</p>
+  </div>
+))}
+
+=========================================
+Why do we need key & key should be unique
+=========================================
+
+Imagine React has :-
+Arun
+Ravi
+Kiran
+
+with IDs :-
+1
+2
+3
+
+Later the data changes :-
+Arun
+Kiran
+
+Ravi was removed.
+
+React needs a way to identify :-
+Which item was removed ?
+Which item stayed ?
+Which item changed ?
+
+The key helps React identify each list item.
+
+Think of it like an employee ID.
+Arun  → ID 1
+Ravi  → ID 2
+Kiran → ID 3
+
+The name might change :-
+Arun → Arun Kumar
+
+but the employee ID remains :-
+ID 1
+
+So React can identify the same item.
+
+====================================================
+Don't use Array Index as Key when you have a real ID
+====================================================
+
+Example :-
+{employees.map((employee, index) => (
+  <div key={index}>
+    {employee.name}
+  </div>
+))}
+
+This works technically, but it is generally better to use a stable unique ID when your data has one.
+
+Prefer :-
+key={employee.id}
+
+instead of :-
+key={index}
+
+Suppose :-
+Index 0 → Arun
+Index 1 → Ravi
+Index 2 → Kiran
+
+Remove Arun :-
+Index 0 → Ravi
+Index 1 → Kiran
+
+The indexes changed.
+
+Array index starts from 0 in JavaScript.
+
+But IDs remain stable :-
+Ravi  → ID 2
+Kiran → ID 3
+
+So React can track the items more reliably.
+
+========================
+key is not a normal prop
+========================
+
+Consider :-
+<Employee key={employee.id} employee={employee} />
+
+Inside Employee :-
+function Employee(props) {
+  console.log(props.key);
+}
+
+You should not expect key to be available as a normal prop.
+
+If the component needs the ID, pass it separately :-
+<Employee
+  key={employee.id}
+  id={employee.id}
+  employee={employee}
+/>
+
+Then :-
+function Employee({ id, employee }) {
+  console.log(id);
+}
+
+So :-
+key={employee.id}
+
+is mainly for React's internal list tracking.
+
+● Rendering Collections
+A collection is simply multiple items.
+It displaying multiple items from an array in the UI.
+
+Example1 ➔ Array of Strings
+const users = ["Arun", "Ravi", "Kiran"];
+
+Example2 ➔ Array of Numbers
+const numbers = [10, 20, 30];
+
+Example3 ➔ Array of Objects ⭐ Very common in real projects
+const products = [
+  { id: 101, name: "Laptop", price: 50000 },
+  { id: 102, name: "Mobile", price: 20000 },
+  { id: 103, name: "Headphones", price: 3000 }
+];
+
+Then in return block :-
+{products.map((product) => (
+  <div key={product.id}>
+    <h3>{product.name}</h3>
+    <p>{product.price}</p>
+  </div>
+))}
+
+This is a collection of products.

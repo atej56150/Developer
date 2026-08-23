@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> CSS Transformations </title>
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            #header{
+                background: #eee;
+                padding: 100px;
+            }
+            .header{
+                height: 100px;
+                width: 100px;
+                background: #fff;
+                border: 2px solid #333;
+                animation: myanim 20s infinite 5s;              
+            }
+
+            @keyframes myanim
+            {
+                0%{
+                    transform: translate(0px, 0px);
+                    background: red;
+                    border-top-right-radius: 150px;
+                }
+                25%{
+                    transform: translate(400px, 0px);
+                    background: yellow;
+                }
+                50%{
+                    transform: translate(400px,400px);
+                    background: green;
+                }
+                75%{
+                    transform: translate(0px,400px);
+                    background: blue;
+                }
+                100%{
+                    transform: translate(0px, 0px);
+                    background-color: chocolate;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div class="header">
+
+            </div>
+        </header>
+    </body>
+</html>

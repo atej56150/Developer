@@ -1,0 +1,93 @@
+Step 1: step1()
+---------------
+function step1() {
+    return Promise.resolve("Step 1 completed");
+}
+
+- Promise.resolve() creates a fulfilled Promise with the given value.
+- Here, the returned value is "Step 1 completed".
+Think of it as Step 1 finishing successfully and providing its result to the next step.
+
+
+
+Step 2: step2(message)
+----------------------
+function step2(message) {
+    return Promise.resolve(`${message} → Step 2 completed`);
+}
+
+- This function accepts a parameter called message.
+- The message contains the result from Step 1.
+- It adds " → Step 2 completed" to that message.
+- It returns a fulfilled Promise containing the updated message.
+
+For Example: step2("Step 1 completed");
+The Promise fulfills with: Step 1 completed → Step 2 completed
+
+
+
+Step 3: step3(message)
+----------------------
+function step3(message) {
+    return Promise.resolve(`${message} → Step 3 completed`);
+}
+
+This works the same way as Step 2, but it receives the result from Step 2 and adds the Step 3 message.
+Its resulting value is: Step 1 completed → Step 2 completed → Step 3 completed
+
+
+
+How .then() chaining works
+--------------------------
+1. step1()
+Returns a fulfilled Promise
+"Step 1 completed"
+First .then() receives the result
+        ↓
+2. step2(result)
+Receives Step 1's result
+"Step 1 completed → Step 2 completed"
+Second .then() receives the updated result
+        ↓
+3. step3(result)
+Receives Step 2's result
+"Step 1 completed → Step 2 completed → Step 3 completed"
+        ↓
+4. console.log(result)
+Prints the final result
+
+
+
+Now let's understand each .then()
+---------------------------------
+First .then() :-
+.then((result) => {
+    return step2(result);
+})
+
+The first .then() receives "Step 1 completed" in result.
+Then it calls step2(result) and returns the Promise from step2().
+
+Second .then() :-
+.then((result) => {
+    return step3(result);
+})
+
+This .then() receives the fulfilled value from step2(), not the original Step 1 result.
+It passes that value to step3() and returns its Promise.
+
+Third .then() :-
+.then((result) => {
+    console.log(result);
+});
+
+This receives the fulfilled value from step3() and prints it.
+Notice that this final .then() doesn't return another Promise explicitly. It returns undefined after logging, so the overall chain fulfills with undefined.
+
+Output :-
+Step 1 completed → Step 2 completed → Step 3 completed
+
+
+
+The return statements are important because they pass each Promise to the next link in the chain.
+If omit return inside the callback, the next .then() will not wait for that returned operation, and it won't receive its result.

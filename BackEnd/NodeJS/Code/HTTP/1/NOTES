@@ -1,0 +1,11 @@
+http.createServer() - Creates a new HTTP server instance
+
+The callback function is executed for each request with two parameters:
+    req - The request object (http.IncomingMessage)
+    res - The response object (http.ServerResponse)
+
+res.writeHead() - Sets the response status code and headers
+
+res.end() - Sends the response and ends the connection
+
+server.listen() - Starts the server on the specified port

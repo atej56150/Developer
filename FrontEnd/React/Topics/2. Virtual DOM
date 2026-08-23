@@ -1,0 +1,57 @@
+DOM = Document Object Model.
+
+When the browser loads HTML:
+<h1>Hello Arun</h1>
+<button>Click Me</button>
+
+The browser creates a DOM tree:
+HTML
+ └── body
+      ├── h1
+      │    └── Hello Arun
+      │
+      └── button
+           └── Click Me
+
+If something changes, the browser may need to update the real DOM.
+
+Virtual DOM - React creates a Virtual DOM, which is a lightweight JavaScript representation of the UI.
+
+Example :-
+function App() {
+  return <h1>Hello Arun</h1>;
+}
+
+React internally represents this UI approximately like :-
+Virtual DOM
+     |
+     └── h1
+          |
+          └── Hello Arun
+
+Now suppose we change :-
+<h1>Hello Arun</h1>
+to :-
+<h1>Hello Theja</h1>
+
+React compares :-
+Old Virtual DOM → <h1>Hello Arun</h1>
+New Virtual DOM → <h1>Hello Theja</h1>
+
+React identifies what changed :-
+Hello Arun → Hello Theja
+
+Then React updates the required part of the real DOM.
+
+Flow :-
+State/Data changes
+       ↓
+React creates new Virtual DOM
+       ↓
+Compares with old Virtual DOM
+       ↓
+Finds what changed
+       ↓
+Updates required Real DOM
+       ↓
+Browser displays updated UI

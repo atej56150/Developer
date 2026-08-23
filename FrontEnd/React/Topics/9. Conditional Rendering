@@ -1,0 +1,47 @@
+It means displaying different UI based on a condition.
+Conditional rendering in React means rendering different UI elements based on a condition. 
+React supports conditional rendering using JavaScript techniques such as if statements, logical AND operator, ternary operator, and early returns.
+
+● if
+Use if when have multiple conditions or more complex logic.
+Use if when the condition decides which entire UI/component should be returned.
+
+● AND Operator (&&)
+&& is useful when want to show something only when a condition is true.
+When to use && - Show this only if the condition is true.
+Syntax :- {condition && <Component />}
+
+If condition is TRUE → Show Component
+If condition is FALSE → Show Nothing
+
+true && JSX   → JSX will display
+false && JSX  → JSX will NOT display
+
+Examples :-
+{isAdmin && <AdminPanel />}
+{isLoggedIn && <LogoutButton />}
+{hasNotifications && <NotificationIcon />}
+{cartItems.length > 0 && <Checkout />}
+
+● Ternary
+It is useful when want to choose between two different UI elements.
+Syntax :- condition ? True : False
+
+condition
+   ↓
+ ┌───────┐
+true    false
+ ↓        ↓
+ A        B
+
+Examples :-
+{isLoggedIn ? <Dashboard /> : <Login />}
+{isLoading ? <Loading /> : <ProductList />}
+{isDarkMode ? <DarkTheme /> : <LightTheme />}
+
+● Early Return
+It means checking a condition at the beginning of a component and returning immediately if that condition is met.
+When a function or React component has multiple return statements, the first return whose condition becomes true will execute and immediately stop the function execution.
+Even if multiple conditions are true, only the first matching return will execute because return stops the execution immediately there only.
+Multiple returns → First matching return executes → Execution stops → Remaining returns are not executed.
+It is especially useful for: Loading, Error, Authentication, Missing data, Permission checks.

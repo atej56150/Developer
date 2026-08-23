@@ -1,0 +1,20 @@
+<!-- Global Variables & function {} scope -->
+
+<html>
+<head>
+   <title> JavaScript Variable Scope Example</title>
+</head>
+<body onload = checkscope();>   
+   <script>
+        var myVar = "global";                             // Declare a global variable
+        function checkscope( ) {
+            var myVar = "local";                          // Declare a local variable
+            document.write(myVar);
+        }
+        document.write(myVar)
+   </script>     
+</body>
+</html>
+
+
+<!-- the local variable takes preference over the global variable and prints the 'local' in the output. -->

@@ -1,0 +1,35 @@
+Flow :-
+const [count, setCount] = useState(0);
+      ↓
+useState(0): Initial value = 0
+count: current value = 0
+setCount: function to change count
+React reaches: <h2>Count: {count}</h2>
+Since: count = 0
+React displays Count: 0
+      ↓
+User clicks Increment
+      ↓
+button has: onClick={() => setCount(count + 1)}
+arrow function: () => setCount(count + 1)
+setCount(count + 1)
+count = 0 
+count + 1
+0 + 1 = 1
+setCount(1)
+React updates the state: Old count = 0 -> setCount(1) -> New count = 1
+count = 1
+React re-renders the component
+UI displays Count: 1
+      ↓
+again User clicks Increment
+      ↓
+React does not reset count back to 0.
+React remembers the state now: count = 1
+setCount(count + 1)
+setCount(1 + 1)
+setCount(2)
+React updates the state: 1 → 2
+count = 2
+React re-renders the component
+UI displays Count: 2

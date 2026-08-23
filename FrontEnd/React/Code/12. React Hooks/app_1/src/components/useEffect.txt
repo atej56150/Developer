@@ -1,0 +1,178 @@
+Create the Component :-
+--------------------
+function Users() {...} ➔ This creates a React functional component called Users.
+
+
+
+useState :-
+--------
+It used to store data that can change.
+we will store the users received from the API.
+
+const [users, setUsers] = useState([]);
+users     ➔ stores the data
+setUsers  ➔ updates the data
+We are creating a state variable called users.
+Initially: users = []
+Because we passed an empty array: useState([])
+So initially there are no users. setUsers is the function used to update users.
+useState([]) creates a state variable with an initial value of an empty array.
+
+
+
+useEffect :-
+---------
+It used to perform a side effect.
+Examples of side effects: used for the API call.
+
+● useEffect(() => { ➔ Run this code as a side effect.
+
+● fetch("https://jsonplaceholder.typicode.com/users") ➔ fetch() sends a request to the API (OR) fetch() is used to make an HTTP request.
+
+● https://jsonplaceholder.typicode.com/users ➔ we are requesting user data
+The API returns user information like below:
+[
+  {
+    id: 1,
+    name: "Leanne Graham"
+  },
+  {
+    id: 2,
+    name: "Ervin Howell"
+  },
+  ...
+]
+
+Initially, we don't have this data, That's why users starts as: []
+
+● .then(response => response.json()) 
+API sends a response, I received the response. Now convert it to usable JavaScript data.
+When the server responds, the first .then() gets that response. 
+
+response => response.json() ➔ Take the response and convert it from JSON format into JavaScript data.
+
+response ➔ is the API response object OR contains the server response.
+response.json() ➔ Convert the response body into JavaScript data OR Response received from fetch() needs to be converted into JavaScript data.
+
+so the server may send JSON like :-
+[
+  {
+    "id": 1,
+    "name": "Arun"
+  },
+  {
+    "id": 2,
+    "name": "Rahul"
+  }
+]
+
+response.json() ➔ converts that response into a JavaScript object/array.
+response.json() ➔ itself returns a Promise.
+
+● .then(data => setUsers(data))
+I got the actual user data. Now put it into React state.
+
+data ➔ the converted data is passed to data.
+
+so the data could contain :-
+data = [
+  {
+    id: 1,
+    name: "Arun"
+  },
+  {
+    id: 2,
+    name: "Rahul"
+  }
+];
+
+setUsers(data) ➔ Take the value inside data and put it into the users state - updates the users state.
+
+● }, []); ➔ The empty array [] is called the dependency array.
+
+
+
+
+Before API response :-
+users = []
+
+After API response :-
+users = [
+  { id: 1, name: "Arun" },
+  { id: 2, name: "Rahul" }
+]
+
+When setUsers() updates the state, React re-renders the component.
+
+
+
+return (...) ➔ This is the UI that the component displays.
+
+
+
+{users.map(user => (
+        <p key={user.id}>{user.name}</p>
+))}
+----------------------------------------
+
+{users.map(user => ( ➔ users is an array.
+
+For Example :-
+users = [
+  { id: 1, name: "Arun" },
+  { id: 2, name: "Rahul" },
+  { id: 3, name: "Ravi" }
+];
+
+.map() goes through each user one by one.
+
+Conceptually: users.map()
+User 1 → Arun
+User 2 → Rahul
+User 3 → Ravi
+
+user => ( ➔ The user represents one item from the users array.
+
+First time :-
+user = {
+  id: 1,
+  name: "Arun"
+}
+
+Second time :-
+user = {
+  id: 2,
+  name: "Rahul"
+}
+
+Third time :-
+user = {
+  id: 3,
+  name: "Ravi"
+}
+
+<p key={user.id}>{user.name}</p> ➔ it display the user name
+
+Suppose :-
+user = {
+  id: 1,
+  name: "Arun"
+}
+
+Then :- 
+<p key={user.id}>{user.name}</p>
+
+Becomes :- 
+<p key={1}>Arun</p>
+<p key={2}>Rahul</p>
+<p key={3}>Ravi</p>
+
+<p key={user.id}> ➔ React needs a unique key when rendering a list.
+
+For Example :-
+id: 1
+id: 2
+id: 3
+
+So that key={user.id} gives each <p> a unique identity.
+This helps React efficiently identify which list items changed/removed.

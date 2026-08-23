@@ -1,0 +1,31 @@
+Prop Drilling (Without useContext) :-
+Prop drilling is the process of passing data from a parent component to a deeply nested child component through multiple intermediate components using props, even when those intermediate components do not need to use the data themselves.
+
+Scenario :-
+We need to pass userName and eMailID from App to User through Dashboard and Profile.
+we need to pass userName, eMailID as a prop through every component, even though Dashboard and Profile don't need to use it themselves.
+
+Flow :-
+App — owns userName, eMailID
+        ↓ props
+Dashboard — receives and passes props
+        ↓ props
+Profile — receives and passes props
+        ↓ props
+User — displays Name: aruntheja & Email: is aruntheja@gmail.com
+
+How does it work :-
+1. App creates the userName, eMailID are variable with the value "aruntheja", "aruntheja@gmail.com".
+2. App passes them to Dashboard using userApp={userName} eMailApp={eMailID}.
+3. Dashboard receives these props and passes them to Profile using userProfile={userDashboard} eMailProfile={eMailDashboard}.
+4. Profile receives these props and passes them to User using ➡️ User - PropDrilling ➔ Name {userProfile} & Email is {eMailProfile}.
+5. User displays as ➡️ User - PropDrilling ➔ Name: aruntheja & Email: is aruntheja@gmail.com.
+
+Output :-
+User - PropDrilling ➔ Name: aruntheja & Email: is aruntheja@gmail.com
+
+Problem :- 
+Dashboard and Profile only pass the data along without using it themselves. This is called Prop Drilling.
+
+Solution :-
+We can use React Context (useContext) to access shared data in deeply nested components without manually passing props through every intermediate component.
