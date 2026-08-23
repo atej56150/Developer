@@ -1,0 +1,9 @@
+[Spread Operator]
+It is represented with three dots (...).
+It is used to combining the Elements from merging an 2 or more Arrays, Objects.
+
+[Ternary Operator]
+The ternary operator is a simplified conditional operator like if / else.
+The syntax for Ternary Operator is      
+● condition ? true : false
+● condition ? expression if true : expression if false

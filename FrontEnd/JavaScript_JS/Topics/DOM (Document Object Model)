@@ -1,0 +1,8 @@
+The DOM is the way JavaScript interacts with an HTML page.
+
+Think of it like this:-
+HTML
+ ↓
+Browser creates DOM
+ ↓
+JavaScript can read/change the page

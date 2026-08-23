@@ -1,0 +1,18 @@
+[Example]
+You order food → wait → food arrives.
+
+[In programming]
+Start request
+     ↓
+   Waiting...
+     ↓
+Data arrives
+
+Promise means: I don't have the value right now, but I promise I'll give you the value later.
+
+setTimeout(() => {}): don't immediately get the result.
+
+resolve() means: The operation finished successfully. Here is the result.
+reject() means: Something went wrong.
+
+.then() means: When the Promise finishes, run this code.

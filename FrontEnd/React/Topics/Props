@@ -1,0 +1,34 @@
+Props stands for Properties.
+Props are arguments passed into React components.
+It allow you to pass data from one component to another component.
+Props are used to pass data from a parent component to a child component.
+Props are passed to components via HTML attributes.
+Props are read-only → Child cannot modify the Props because they are immutable.
+
+
+Parent Component
+      |
+      |  passes data
+      ↓
+Child Component
+
+
+PROPS
+  ↓
+Parent sends data/values
+  ↓
+Child receives data/values
+
+
+• Passing Props
+
+• Destructuring Props
+
+• Passing Multiple Props
+
+• Default Props
+
+• Children Props
+
+• Props Validation
+Checking whether the component receives the correct type of data.

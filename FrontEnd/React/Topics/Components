@@ -1,0 +1,30 @@
+Earlier, the developers write more than thousands of lines of code for developing a single page application. 
+These applications follow the traditional DOM structure, and making changes in them was a very challenging task. 
+If any mistake found, it manually searches the entire application and update accordingly. The component-based approach was introduced to overcome an issue. 
+In this approach, the entire application is divided into a small logical group of code, which is known as components.
+A Component is considered as the core building blocks of a React application. It makes the task of building UIs much easier. 
+Each component exists in the same space, but they work independently from one another and merge all in a parent component, which will be the final UI of your application.
+Every React component have their own structure, methods as well as APIs. They can be reusable as per your need. 
+A Component is a reusable piece of UI. A component is a reusable piece of UI in React.
+
+we have mainly type of components. They are
+
+• Functional Component :-
+A Functional Component is a JavaScript function that returns JSX (UI) and is used to create reusable UI elements in React. 
+It can receive data through props and can manage state and other React features using Hooks.
+A Functional Component in React is a JavaScript function that returns JSX to render UI. 
+It can accept props as input and use React Hooks such as useState and useEffect to manage state and side effects.
+
+• Component Composition :-
+It means building a bigger component by combining smaller components.
+It is the process of building a larger UI by combining smaller React components.
+It means combining smaller, reusable React components together to build a larger UI component.
+
+• Class Component :-
+Before React Hooks became popular, React applications commonly used Class Components.
+Class Components are still supported by React, but we don’t recommend using them in new code.
+Class Component is a React component created using a JavaScript class that extends React.Component and uses a render() method to return JSX.
+Class Components are not commonly used for new React development today. Modern React mainly uses Functional Components + Hooks.
+
+• Reusable Component :-
+Reusable Component is a component that we can use multiple times with different data, usually through Props & Destructuring Props.

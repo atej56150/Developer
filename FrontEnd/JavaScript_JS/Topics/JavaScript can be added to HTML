@@ -1,0 +1,10 @@
+In an HTML document, can add JavaScript in the following ways :-
+
+◉ Inside the <head> or <body> section using <script> tags.
+Can place <script> tags in either the <head> or <body> section.
+
+◉ External JavaScript File (Recommended for Larger Scripts)
+It store JavaScript in a separate .js file and link to the "src" attribute using <script> tags.
+    
+◉ Inline JavaScript (Directly in HTML Elements)
+It can add small scripts directly in HTML attributes like onclick, onload, ..., etc.
