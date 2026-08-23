@@ -1,0 +1,4 @@
+loose equality ==
+strict equality ===
+loose inequality !=
+strict inequality !==

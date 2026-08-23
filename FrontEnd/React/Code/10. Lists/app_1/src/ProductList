@@ -1,0 +1,88 @@
+{products.map((product) => (
+  <>
+    <ProductCard_DP
+      key={product.id}
+      product={product}
+    />
+    <ProductCard_P
+      key={product.id}
+      product={product}
+    />
+  </>
+))}
+
+⚠️ Works and UI displays, but not the correct key placement.
+map() returns a Fragment <>...</>, but the key is placed on its child components instead of the Fragment.
+Drawback: React may show the warning “Each child in a list should have a unique key prop”, because the Fragment itself has no key.
+
+{products.map((product) => (
+  <React.Fragment key={product.id}>
+    <ProductCard_DP product={product} />
+    <ProductCard_P product={product} />
+  </React.Fragment>
+))}
+
+{products.map((product) => (
+  <Fragment key={product.id}>
+    <ProductCard_DP product={product} />
+    <ProductCard_P product={product} />
+  </Fragment>
+))}
+
+{products.map((product) => (
+  <div key={product.id}>
+    <ProductCard_DP product={product} />
+    <ProductCard_P product={product} />
+  </div>
+))}
+
+✅ Correct and recommended.
+map() returns a React.Fragment, so key={product.id} is correctly placed on the Fragment.
+Drawback: No key-related drawback. This is the proper way to return multiple components for each product without adding an extra <div>.
+
+When map() returns multiple elements, put the key on the outermost element that wraps those elements — usually a Fragment or a div.
+
+One component :-
+map() → ProductCard       ➔ key on ProductCard ✅
+
+Multiple components :-
+map() → Fragment          ➔ key on Fragment ✅
+
+Multiple components :-
+map() → div               ➔ key on div ✅
+
+JSX element can represent either an HTML element (<h1>, <div>, <p>, <span>, <button>, <input>, <ul>, <li>) or a React components (<ProductCard_P />, <ProductCard_DP />).
+
+ProductCard	➔ Component Name
+<ProductCard />	➔ JSX Element representing a React component
+<div> ➔ HTML Element or JSX Element representing a React component
+
+Single JSX element :-
+map(product => (
+  <ProductCard />
+))
+
+Multiple JSX elements in <div>...</div> :-
+map(product => (
+  <div>
+    <ProductCard_DP />
+    <ProductCard_P />
+  </div>
+))
+
+Multiple JSX elements in Fragment <>...</> :-
+map(product => (
+  <>
+    <ProductCard_DP />
+    <ProductCard_P />
+  </>
+))
+
+Multiple HTML elements inside a <div>...</div> :-
+{products.map((product) => (
+  <div key={product.id}>
+    <h3>{product.name}</h3>
+    <p>Price: ₹{product.price}</p>
+    <button>Add to Cart</button>
+  </div>
+))}

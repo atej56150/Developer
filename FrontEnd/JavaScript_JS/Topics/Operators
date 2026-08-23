@@ -1,0 +1,5 @@
+[Ternary Operator]
+The ternary operator is a simplified conditional operator like if / else.
+The syntax for Ternary Operator is      
+● condition ? true : false
+● condition ? expression if true : expression if false

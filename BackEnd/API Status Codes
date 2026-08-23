@@ -1,0 +1,24 @@
+2xx: Success (your code is fine)
+- 200 OK: Request succeeded
+- 201 Created: New resource made
+- 204 No Content: Success, nothing to return
+
+3xx: Redirect (check URL + caching)
+- 301 Moved Permanently: Update URL
+- 302 Found: Temporary redirect
+- 304 Not Modified: Use cached version
+
+4xx: Client Error (fix request/auth/params)
+- 400 Bad Request: Invalid input
+- 401 Unauthorized: Missing/invalid auth
+- 403 Forbidden: Auth OK, no permission
+- 404 Not Found: Endpoint/resource missing
+- 409 Conflict: State/version mismatch
+- 422 Unprocessable: Validation failed
+- 429 Too Many Requests: Rate limited
+
+5xx: Server Error (check server logs, and upstream for some)
+- 500 Internal Error: Server crashed
+- 502 Bad Gateway: Upstream failed
+- 503 Service Unavailable: Overloaded/maintenance
+- 504 Gateway Timeout: Upstream too slow

@@ -1,0 +1,56 @@
+What is React ?
+React is a JavaScript library for building user interfaces, especially web applications.
+
+Build the UI using small, reusable components.
+
+[For Example, imagine an e-commerce website]
+App
+│
+├── Navbar
+│   ├── Logo
+│   ├── SearchBar
+│   └── Cart
+│
+├── ProductList
+│   ├── ProductCard
+│   ├── ProductCard
+│   └── ProductCard
+│
+└── Footer
+
+Instead of writing one huge HTML/JS file, React lets us break the application into components.
+
+
+
+[Render vs Re-render]
+● Render
+React component మొదటిసారిగా execute అయి, దాని JSX ఆధారంగా UI screen మీద కనిపించే content తయారయ్యే ప్రక్రియను Render అంటాం.
+
+Example :-
+function App() {
+  return <h1>Hello React!</h1>;
+}
+
+ఇక్కడ App component మొదటిసారి render అవుతుంది. Screen మీద Hello React! కనిపిస్తుంది.
+
+● Re-render
+Component ఇప్పటికే render అయిన తర్వాత, దాని state లేదా props మారడం వంటి కారణాల వల్ల React ఆ component ను మళ్లీ render చేయడాన్ని Re-render అంటాం.
+
+Example :-
+import { useState } from "react";
+function App() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+    </div>
+  );
+}
+export default App;
+
+Website open చేసినప్పుడు Count: 0 కనిపిస్తుంది ➔ Render.
+Button click చేసినప్పుడు count 1 అవుతుంది.
+React కొత్త Count: 1 తో UI ను మళ్లీ update చేస్తుంది ➔ Re-render.

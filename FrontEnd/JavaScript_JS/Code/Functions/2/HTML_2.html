@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Interactive Counter</h2>
+  <p id="counter">0</p>
+  <button onclick="increment()">+1</button>
+  <button onclick="decrement()">-1</button>
+  <button onclick="reset()">Reset</button>
+
+  <script>
+    // Initialize counter
+    let count = 0;
+    const counterElement = document.getElementById("counter");
+    
+    // Update display function (reusable)
+    function updateDisplay() {
+      counterElement.textContent = count;
+    }
+    
+    // Button functions
+    function increment() {
+      count++;
+      updateDisplay();
+    }
+    
+    function decrement() {
+      count--;
+      updateDisplay();
+    }
+    
+    function reset() {
+      count = 0;
+      updateDisplay();
+    }
+    
+    // Initial display update
+    updateDisplay();
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+Variables is a named storage location that holds a value, which can be any data type, such as numbers, strings, objects, etc. 
+It can be declared using keywords like var, let, const.
+Variables can store only one value at a time, so it can't store multiple values for each variables.
+
+If assign a variable without declaring it (var, let, const), it automatically becomes a Global Variable.
+
+• var
+The var variables are declared with in a function {} scope, that can't access outside of function {} scope.
+The var variables ignores block {} scope.
+It's accessible anywhere within the function where it's declared.
+The var variables allows both redeclaration and reassignment of it value.
+• let
+It declared with in the block {} scope only.
+The let variables is only accessible OR declared with in a block {} scope only, that can't access outside of a block {} scope.
+The let variables does not allows redeclaration of it value in the block {} scope. 
+The let variables allows reassignment of it value, means that we can overwrite the values for let variables.
+• const
+Constant Variable is always a fixed value. It will never change during program execution.
+It declared with in the block {} scope only.
+The const variables are declared with in a block {} scope only, that can't access outside of a block {} scope.
+The const variables does not allows both redeclaration and reassignment of it value.
+
+[Types]
+• Local Variables
+Local Variables are declared inside the curly braces {} or a function. 
+In JavaScript, variables are accessible within the function or block only where they are declared.
+Local Variables with the same name can be used in different functions or blocks. 
+Local Variables are deleted after the function is completed.
+• Global Variables
+Global Variables are declared outside and can be accessible from anywhere including function {} scope and block {} scope within the script.
+Global Variables are declared outside any function OR block and can be accessed from anywhere in the script, including inside functions and blocks ({}) scope.
+
+[Variable Data Types]
+• String
+Strings represent text values.
+• Number
+The number represents numerical values.
+• Boolean
+True or false is represented by boolean.
+• Object
+Key-Value pairs are represented by objects.
+• Null
+It indicates a purposefully empty value.
+• Undefined
+A declared variable without a value given to it.

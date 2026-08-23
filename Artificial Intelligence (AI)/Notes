@@ -1,0 +1,30 @@
+[LLM = Large Language Model]
+LLM is an AI model trained on huge amounts of text so it can understand and generate human-like language.
+
+How it works :-
+User: "What is RAG ?"
+       ↓
+      LLM
+       ↓
+Understands the question
+       ↓
+Generates an answer
+
+Examples of LLMs include: GPT, Claude, Gemini, Llama
+
+[LLM vs RAG]
+LLM = The model that generates the answer.
+RAG = A system that finds relevant information and gives it to the LLM before it answers.
+
+How it works :-
+                 RAG
+                  │
+User Question → Retriever → Relevant Documents
+                                  │
+                                  ▼
+                              ┌───────┐
+                              │  LLM  │
+                              └───────┘
+                                  │
+                                  ▼
+                                Answer

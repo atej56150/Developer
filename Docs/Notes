@@ -1,0 +1,22 @@
+[VSCode & VSCode_Insiders]
+code .
+code-insiders .
+
+[VSCode_Extensions]
+GitLens
+Git Blame
+Git History
+Git Graph
+
+[VSCode_Shortcuts]
+Ctrl + G                    =       navigate to a specific line number within the current file
+Ctrl + .			        =		quick fix
+Ctrl + /			        =		line comment // (add & remove)
+Ctrl + Space                =       used to trigger IntelliSense and code suggestions/auto-completion
+Ctrl + Enter			    =		insert a new line below the current line
+Ctrl + Shift + Enter	    =		insert a new line above the current line
+
+[Windows_Shortcuts]
+Ctrl + Shift + V            =       paste content as plain text, stripping out all original formatting (like bold, italics, colors, fonts)
+Windows + V                 =       paste multiple copied items 
+Windows + Shift + S		    =		select particular area to capture

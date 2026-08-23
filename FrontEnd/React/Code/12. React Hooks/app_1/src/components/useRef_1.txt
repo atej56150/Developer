@@ -1,0 +1,44 @@
+Create a Reference :-
+------------------
+const inputRef = useRef(null);
+
+inputRef ➔ is a reference variable.
+null ➔ means it does not point to an element yet.
+Once React renders the input, inputRef.current points to that input element.
+Think of inputRef as a pointer to the input box.
+
+
+
+Create the Function :-
+-------------------
+const handleFocus = () => {
+  inputRef.current.focus();
+};
+
+When this function runs:
+inputRef.current ➔ accesses the input box.
+.focus() ➔ places the cursor inside the input box.
+
+
+
+Connect the reference to the input :-
+----------------------------------
+<input ref={inputRef} />
+
+ref={inputRef} connects our reference to the input element.
+Now React lets us access that input through inputRef.current.
+
+
+
+Call the function when the button is clicked :-
+--------------------------------------------
+<button onClick={handleFocus}>
+  Focus Input
+</button>
+
+When the user clicks the button, React calls handleFocus, and the input receives focus.
+
+
+
+Remember this simple formula: useRef → ref={inputRef} → inputRef.current → .focus()
+useRef helps us access the input box directly, and .focus() moves the cursor into it.

@@ -1,0 +1,71 @@
+----------
+● useState
+----------
+useState → Value change అయితే re-render.
+
+useState is used to store and update data inside a React component.
+
+syntax :- const [state, setState] = useState(initialValue);
+state → State Value = state is the current value stored by React.
+setState → Setter Function = setState is the setter function used to update/change the state value.
+initialValue → Initial/Starting Value
+
+so 'state' and 'setState' are not fixed names.
+choose the different names for examples given below :-
+const [name, setName] = useState("Arun");
+const [age, setAge] = useState(25);
+const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+Very commonly used for:
+- Form input values
+- Counter
+- Modal open/close
+- Checkbox
+- Dropdown
+- Login form
+- Loading state
+- API data
+
+-----------
+● useEffect
+-----------
+React component లో ఉన్న JSX ద్వారా UI screen మీద కనిపించే content render అయిన తర్వాత, API calls చేయడానికి, timers run చేయడానికి లేదా ఇతర side effects నిర్వహించడానికి useEffect Hook ఉపయోగిస్తాం.
+
+useEffect is used when you need to perform a side effect after React renders.
+
+Very commonly used for:
+- API call
+- Timer
+- Event listener
+- Browser document title
+- Subscription
+
+--------
+● useRef
+--------
+React component re-render కాకుండా ఒక value ను store చేసి గుర్తుంచుకోవడానికి లేదా input box లాంటి HTML element ను direct గా access చేయడానికి useRef Hook ఉపయోగిస్తాం.
+useRef → Value change అయినా re-render కాదు.
+
+useRef is used to remember a value without re-rendering + access DOM.
+1. Access a DOM element directly
+2. Store a value without causing a re-render
+
+Very commonly used for:
+- Focus input
+- Access DOM element
+- Store timer ID
+- Store previous value
+- Store mutable value that shouldn't trigger rendering
+
+------------
+● useContext
+------------
+It allows components to share data without passing props through every level.
+This solves prop drilling.
+
+Very commonly used for:
+- Logged-in user
+- Theme
+- Language
+- Authentication information
+- Application settings

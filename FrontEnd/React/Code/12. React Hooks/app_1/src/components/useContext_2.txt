@@ -1,0 +1,26 @@
+With useContext :-
+we create a Context to share the username. The User component can access it directly without receiving props from Dashboard or Profile.
+
+Flow :-
+App — provides "Arun" using UserContext.Provider
+      ↓
+Dashboard
+      ↓
+Profile
+      ↓
+User — reads "Arun" using useContext(UserContext)
+      ↓
+Displays: Hello Arun
+
+How does it work :-
+Dashboard and Profile do not pass the username through props. 
+The User component reads "Arun" directly from Context using useContext().
+1. createContext() creates a Context object called UserContext.
+2. UserContext.Provider makes the value "Arun" available to components inside it.
+3. Dashboard and Profile don't need to receive or pass userName.
+4. useContext(UserContext) lets User read the nearest matching provider's value.
+5. User displays Hello Arun.
+
+Solution :-
+App provides the value, and User consumes it directly.
+This solves/avoids the prop drilling.

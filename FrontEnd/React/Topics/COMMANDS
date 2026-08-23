@@ -1,0 +1,30 @@
+Download and Install :----> https://nodejs.org/en 
+
+[Version]
+node -v
+npm -v
+
+[To create a package.json file]
+npm init -y
+
+[To install the React Dependencies]
+npm install
+npm install react
+npm install react --save
+
+[To install the React Router]
+npm install react-router-dom
+
+[To install the React-DOM]
+npm install react-dom
+npm install react-dom --save
+
+[To create a Project]
+npm init react-app PROJECT_FOLDER_NAME
+npx create-react-app PROJECT_FOLDER_NAME
+npm create vite@latest PROJECT_FOLDER_NAME
+
+[To run the Application]
+cd PROJECT_FOLDER_NAME
+npm run dev
+cd PROJECT_FOLDER_NAME && npm run dev

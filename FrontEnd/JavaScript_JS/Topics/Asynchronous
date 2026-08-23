@@ -1,0 +1,70 @@
+JavaScript normally executes code one line at a time.
+
+console.log("A");       
+console.log("B");       
+console.log("C");       
+
+Output:
+A
+B
+C
+
+This is synchronous execution.
+
+But some operations take time, such as:
+Getting data from an API
+Reading a file
+Waiting for a timer
+Database operations
+Sending a request to a server
+
+We don't want JavaScript to stop everything while waiting.
+That's where asynchronous JavaScript comes in.
+
+
+
+[Synchronous vs Asynchronous]
+
+Synchronous:-
+console.log("Start");                       
+console.log("Doing something...");         
+console.log("End");                        
+Output:-
+Start
+Doing something...
+End
+
+Each statement waits for the previous one.
+
+Asynchronous:-
+console.log("Start");
+setTimeout(() => {
+    console.log("Doing something...");
+}, 2000);
+console.log("End");
+Output:-
+Start
+End
+Doing something...
+
+Why setTimeout() tells JavaScript: Run this function after 2 seconds, but don't block the rest of the program.
+
+
+
+[Callbacks]
+A callback is simply a function passed to another function so that it can be executed later.
+The callback runs after the asynchronous operation finishes. 
+
+[Promise]
+A Promise is a guarantee that you'll get a result in the future — either success or failure.
+A Promise has 3 states:
+Pending   →  waiting, not done yet
+Fulfilled →  completed successfully ✅
+Rejected  →  something went wrong   ❌
+
+resolve() means: The operation finished successfully. Here is the result. → success
+reject() means: Something went wrong.                                     → failure  
+
+.then()	means: Handle successful Promise result (resolve)
+.catch() means: Handle failure Promise error (reject)
+.finally() means: Runs always, success or failure (resolve or reject)

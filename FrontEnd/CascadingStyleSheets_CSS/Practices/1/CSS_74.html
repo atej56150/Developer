@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> CSS Transformations </title>
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            #header{
+                background: #eee;
+                padding: 100px;
+            }
+            .btn{
+                padding: 10px 24px;
+                border: none;
+                background: green;
+                color: #fff;
+                border-radius: 6px;
+                animation: example 1s infinite;
+            }
+
+            @keyframes example
+            {
+                from {
+                    transform: translateX(40px);
+                }
+                to{
+                    transform: translateX(-40px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <button class="btn">Click Here to Pay</button>
+        </header>
+    </body>
+</html>

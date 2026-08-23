@@ -1,0 +1,21 @@
+Without useContext (Prop Drilling) :-
+we pass userName as a prop through every component, even though Dashboard and Profile don't need to use it themselves.
+
+Flow :-
+App — owns userName
+      ↓
+Dashboard — receives and passes prop
+      ↓
+Profile — receives and passes prop
+      ↓
+User — displays Arun
+
+How does it work :-
+1. App creates the userName variable with the value "Arun".
+2. App passes it to Dashboard using userName={userName}.
+3. Dashboard receives it and passes it to Profile.
+4. Profile receives it and passes it to User.
+5. User displays Hello Arun.
+
+Problem :- 
+Dashboard and Profile only pass the data along. This is called prop drilling.

@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    padding: 5px;
+}
+
+#header{
+    background: #c49c18;
+    box-shadow: 0px 10px 5px #333;
+    margin: 20px;
+}
+
+.header{
+    width: 88%;
+    margin: 0% auto;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    padding: 0px;
+}
+
+.menu li {
+    list-style-type: none;
+    padding: 10px 20px;
+}
+
+.menu li a{
+    color: #666
+}
+
+.menu li:hover{
+    background-color: orange;
+    border-radius: 15px 10em 10%;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.banner{
+    position: relative;
+}
+
+.bannerinfo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 30px;
+}
+
+.section-title{
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 40px;
+    color: #a40000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 0px auto;
+}
+
+.service{
+    flex: 30%;
+    border: 1px solid;
+    padding: 20px;
+    margin: 10px;
+}
+
+.icontitle{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+ 
+.icon i{
+    font-size: 50px;
+    color: blue;
+}
+
+.icon{
+    padding-right: 20px;
+}
+
+.sdesc {
+    margin-top: 15px;
+}
+
+.footer{
+    background-color: #a40000;
+    padding: 10px 0px;
+}
+
+.footer p{
+    color:aqua;
+    text-align: center;
+}
+
+
+/***********************
+Media Query Section
+***********************/
+
+@media only screen and (max-width:600px) {
+    .header, .menu{
+        flex-direction: column;
+    }
+    .bannerinfo{
+        display: none;
+    }
+    .services, .icontitle{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px)
+{
+    .header{
+        flex-direction: column;
+    }
+    .bannerinfo{
+        width: 98%;
+    }
+}

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> CSS Transformations </title>
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            #header{
+                background: #eee;
+                padding: 100px;
+            }
+            .header{
+                height: 100px;
+                width: 100px;
+                background: #fff;
+                border: 2px solid #333;             
+            }
+
+            .header:hover{
+                animation: myanim 2s 1 0s;
+            }
+
+            @keyframes myanim
+            {
+                0%{
+                    transform: rotate(0deg);
+                }
+                20%{
+                    transform: rotate(45deg);
+                }
+                40%{
+                    transform: rotate(-45deg);
+                }
+                60%{
+                    transform: rotate(20deg);
+                }
+                80%{
+                    transform: rotate(-20deg);
+                }
+                100%{
+                    transform: rotate(0deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div class="header">
+
+            </div>
+        </header>
+    </body>
+</html>

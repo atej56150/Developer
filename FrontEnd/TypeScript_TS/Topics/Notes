@@ -1,0 +1,14 @@
+TypeScript is not directly supported by browsers. 
+Browsers only execute JavaScript. 
+TypeScript must be compiled (transpiled) into JavaScript before it can run.
+TypeScript is built on top of JavaScript.
+
+TypeScript (app.ts):
+====================
+let message: string = "Hello, world!";
+console.log(message);
+
+Compiles to JavaScript (app.js):
+================================
+let message = "Hello, world!";
+console.log(message);

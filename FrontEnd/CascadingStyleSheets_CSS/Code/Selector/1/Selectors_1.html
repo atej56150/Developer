@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* 1. Grouping Selector (div, p) */
+        div, p {
+            margin: 5px;
+            padding: 5px;
+        }
+        
+        /* 2. Descendant Selector (div p) */
+        div p {
+            background-color: #e6f7ff;
+            border-left: 3px solid blue;
+        }
+        
+        /* 3. Adjacent Sibling Selector (div + p) */
+        div + p {
+            background-color: #e6ffe6;
+            border-left: 3px solid green;
+        }
+        
+        /* 4. General Sibling Selector (div ~ p) */
+        div ~ p {
+            font-style: italic;
+        }
+        
+        /* 5. Child Selector (div > p) */
+        div > p {
+            font-weight: bold;
+        }
+        
+        /* Additional styling for clarity */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .example {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .note {
+            background-color: #fffde7;
+            padding: 10px;
+            border-left: 4px solid #ffd600;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors Demonstration</h1>
+    
+    <div class="example">
+        <h2>1. Grouping Selector: <code>div, p</code></h2>
+        <p>This paragraph is selected by the grouping selector (along with all divs).</p>
+        <div>This div is selected by the grouping selector (along with all paragraphs).</div>
+    </div>
+    
+    <div class="example">
+        <h2>2. Descendant Selector: <code>div p</code></h2>
+        <div>
+            <p>This paragraph is selected (direct child).</p>
+            <section>
+                <p>This paragraph is also selected (nested descendant).</p>
+            </section>
+        </div>
+        <p>This paragraph is NOT selected (not inside a div).</p>
+    </div>
+    
+    <div class="example">
+        <h2>3. Adjacent Sibling Selector: <code>div + p</code></h2>
+        <div>This is a div</div>
+        <p>This paragraph is selected (immediately after div).</p>
+        <p>This paragraph is NOT selected (not immediately after div).</p>
+    </div>
+    
+    <div class="example">
+        <h2>4. General Sibling Selector: <code>div ~ p</code></h2>
+        <div>This is a div</div>
+        <p>This paragraph is selected (comes after div).</p>
+        <span>This span breaks the sequence</span>
+        <p>This paragraph is also selected (still comes after div).</p>
+    </div>
+    
+    <div class="example">
+        <h2>5. Child Selector: <code>div > p</code></h2>
+        <div>
+            <p>This paragraph is selected (direct child).</p>
+            <section>
+                <p>This paragraph is NOT selected (not direct child).</p>
+            </section>
+        </div>
+    </div>
+    
+    <div class="note">
+        <strong>Note:</strong> The selector <code>div &lt; p</code> is invalid - CSS cannot select parent elements based on their children.
+    </div>
+</body>
+</html>

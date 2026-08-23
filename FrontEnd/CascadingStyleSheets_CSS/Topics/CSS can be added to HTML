@@ -1,0 +1,11 @@
+CSS can be added to HTML documents in 3 ways :-
+
+● Inline 
+By using the "style" attribute inside HTML elements.
+It is the default.
+
+● Internal
+By using a <style> element in the <head> section.
+
+● External
+By using a <link> element to link to an external CSS file.

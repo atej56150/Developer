@@ -1,0 +1,12 @@
+It is the programming language of the web.
+It is used to create client-side dynamic pages.
+It can update and change both HTML and CSS.
+It can calculate, manipulate and validate data.
+It is a programming language that lets developers create interactive web pages.
+An interactive web page is a dynamic webpage that responds to user actions in real-time.
+Unlike static webpage like HTML that only display fixed content, interactive pages allow users to 
+⚪ Respond to User Input
+Buttons, forms, clicks, hovers, scrolls, or keystrokes trigger immediate feedback.
+Example:- A "Like" button that changes color when clicked.
+⚪ Update Content Without Reloading
+Uses AJAX or Fetch API to load new data dynamically.

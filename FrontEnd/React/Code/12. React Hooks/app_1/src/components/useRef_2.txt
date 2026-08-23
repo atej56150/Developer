@@ -1,0 +1,30 @@
+Store the current value :-
+-----------------------
+const [value, setValue] = useState("")
+useState() stores the current input value.
+Here, value stores what the user types, and setValue updates it.
+Initially, value is an empty string ("").
+
+
+
+Create a ref for the previous value :-
+-----------------------------------
+const previousValue = useRef();
+useRef() stores the previous value without causing a re-render OR stores a value between renders without triggering a re-render when the ref changes.
+This creates a ref object. You can store data in its .current property.
+Initially: previousValue.current ➔ undefined because no initial value was provided.
+It can store a value without causing a re-render when changed. (OR) When you update .current, React does not trigger another render.
+
+
+
+Store the previous value :-
+------------------------
+useEffect() runs after the component renders and saves the current value in previousValue.current.
+useEffect runs after React renders the component.
+previousValue.current = value saves the current value in the ref (OR) It assigns the current value to previousValue.current.
+[value] = the effect runs after the initial render and again whenever value changes.
+
+
+
+Initially, the Previous Value is empty (""). When type Hello, the Current Value displays Hello, and the Previous Value displays the value that was entered before it.
+When type character by character, React treats each input update as a render. For example, typing Hello produces previous values such as H, He, Hel, and Hell as continue typing.
