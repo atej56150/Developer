@@ -1,0 +1,21 @@
+What is React ?
+React is a JavaScript library for building user interfaces, especially web applications.
+
+Build the UI using small, reusable components.
+
+[For Example, imagine an e-commerce website]
+App
+│
+├── Navbar
+│   ├── Logo
+│   ├── SearchBar
+│   └── Cart
+│
+├── ProductList
+│   ├── ProductCard
+│   ├── ProductCard
+│   └── ProductCard
+│
+└── Footer
+
+Instead of writing one huge HTML/JS file, React lets us break the application into components.

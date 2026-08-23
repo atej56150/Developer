@@ -1,0 +1,48 @@
+Functions (normal) can return values (data types like string, number) OR functions.
+
+function FunctionName() { ... }     → create function
+       ↓
+     FunctionName()                 → call function
+       ↓
+     Output
+
+1. Function Declaration
+A normal way to create a function.
+
+2. Function Expression
+We store a function inside a variable.
+
+3. Arrow Function
+It provide a shorter syntax.
+
+4. Default Parameters
+It used when an argument is not provided.
+
+5. Rest Parameters
+
+6. Callback Function
+It is a function passed as an argument to another function.
+
+7. Higher-Order Functions (HOF)
+Takes another function as an argument OR Returns another function.
+HOF can either RECEIVE a function OR RETURN a function.
+
+8. Immediately Invoked Function Expression (IIFE)
+It is a function that executes immediately after it is created.
+IIFE creating the function after, we don't need to call it separately like a normal function. It executes immediately.
+IIFE → Create + Call = immediately but the Normal Function → Create → Call = separately
+
+example :-
+(function () {
+    console.log("Hello");
+})();
+
+(function(){}) → create the function.
+(); → That () calls the function immediately.
+
+Flow :-
+Create function
+      ↓
+() → call immediately
+      ↓
+Output: Hello

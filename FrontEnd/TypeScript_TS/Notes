@@ -1,0 +1,14 @@
+[To install the TypeScript]
+$ npm i -g typescript
+$ npm install -g typescript
+
+[To check the version for TypeScript]
+$ tsc --version
+
+[To create a tsconfig.json]
+$ npx tsc --init
+
+[To run the script in CLI]
+$ node FILENAME.ts
+$ node FOLDERNAME/FILENAME.ts
+$ node ./FOLDERNAME/FILENAME.ts  

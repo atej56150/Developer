@@ -1,0 +1,11 @@
+● useState
+syntax :- const [state, setState] = useState(initialValue);
+state → State Value
+setState → Setter Function
+initialValue → Initial/Starting Value
+
+so 'state' and 'setState' are not fixed names.
+choose the different names for examples given below :-
+const [name, setName] = useState("Arun");
+const [age, setAge] = useState(25);
+const [isLoggedIn, setIsLoggedIn] = useState(false);

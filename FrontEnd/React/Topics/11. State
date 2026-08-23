@@ -1,0 +1,60 @@
+State is data that belongs to a React component and can change over time.
+When state changes, React re-renders the component and shows the updated value.
+
+syntax :- const [state, setState] = useState(initialValue);
+state → State Value
+setState → Setter Function
+initialValue → Initial/Starting Value
+
+so 'state' and 'setState' are not fixed names.
+choose the different names for examples given below :-
+const [name, setName] = useState("Arun");
+const [age, setAge] = useState(25);
+const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+The main topics :-
+
+● Local State
+Local state means state that is used inside one component.
+We normally create local state using useState().
+
+● Updating State
+Update State using the Setter Function.
+
+● State Batching
+Batching means React groups multiple state updates together and performs one re-render instead of re-rendering after every update.
+
+Previous State (prevState) :-
+--------------------------
+whenever new state depends on old state, use: setState(prevState => prevState + newValueBasedOn);
+setState → updates the state
+prevState → previous state value
+=> → function
+prevState + newValueBasedOn → new value calculated from the previous state
+
+This is the main idea behind "Updating State Based on Previous State.
+
+it works for a simple single update ➔ setState(state + 1);
+when the new state depends on the previous state, React recommends the functional form ➔ setState(prevState => prevState + 1); 
+React, take the latest state value, add 1 to it, and make that the new state ➔ setState(prevState => prevState + 1);
+
+Functional Updater: prevState => prevState + 1
+Setter Function with Functional Updater: setState(prevState => prevState + 1);
+
+It is especially important when you have multiple state updates or React batches updates.
+
+Example :-
+const increase = () => {
+  setCount(prev => prev + 1);
+  setCount(prev => prev + 1);
+  setCount(prev => prev + 1);
+};
+
+React processes them using the latest previous value :-
+Starting Count = 0
+First Update: prev = 0 → 1
+Second Update: prev = 1 → 2
+Third Update: prev = 2 → 3
+
+Result :-
+Count: 3

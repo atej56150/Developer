@@ -1,0 +1,13 @@
+[curl]
+# GET all users
+curl http://localhost:3000/api/users
+# GET a single user
+curl http://localhost:3000/api/users/1
+# POST a new user
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Alice","email":"alice@example.com"}' http://localhost:3000/api/users
+# PUT (update) a user
+curl -X PUT -H "Content-Type: application/json" -d '{"name":"John Updated"}' http://localhost:3000/api/users/1
+# DELETE a user
+curl -X DELETE http://localhost:3000/api/users/1
+
+[Postman]

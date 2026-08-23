@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>CSS Mega Menu</title>
+        <style>
+            *{
+                margin: 0px;
+                box-sizing: border-box;
+            }
+            .header{
+                border-bottom: 2px solid #e76d6d;
+            }
+            .mainmenu{
+                display: flex;
+            }
+            .mainmenu li {
+                list-style-type: none;
+                padding: 10px 25px;
+                position: relative;
+            }
+            .mainmenu li:first-child{
+                font-weight: bold;
+                margin: 0px 60px;
+            }
+            .mainmenu li a{
+                text-decoration: none;
+                color: #999;
+            }
+            .megamenu{
+                display: none;
+                background: #efefef;
+                width: 100%;
+                position: absolute;
+            }
+            .mainmenu li:hover .megamenu{
+                display: flex;
+            }
+            .leftblock, .rightblock{
+                flex: 60%;
+                display: flex;
+            }
+            .blockitems{
+                padding: 20px;
+            }
+            .blockitems li:first-child{
+                margin: 0px !important;
+            }
+            .block img {
+                width: 200%;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header id="header">
+            <div class="header">
+
+                <div class="megaenu">
+                    <ul class="mainmenu">
+                        <li><a href="">Electronics</a></li>
+                        <li><a href="">Mobiles</a></li>
+                        <li>
+                            <a href="">Laptops</a>
+                            <div class="megamenu">
+                                <div class="leftblock">
+                                    <div class="block">
+                                        <ul class="blockitems">
+                                            <li><a href="">HP-Laptops</a></li>
+                                            <li><a href="">Dell-Laptops</a></li>
+                                            <li><a href="">Lenova-Laptops</a></li>
+                                        </ul>
+                                        <ul class="blockitems">
+                                            <li><a href="">Intel</a></li>
+                                            <li><a href="">AMD</a></li>
+                                            <li><a href="">nivida</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="block">
+                                        <ul class="blockitems">
+                                            <li><a href="">HP-Laptops</a></li>
+                                            <li><a href="">Dell-Laptops</a></li>
+                                            <li><a href="">Lenova-Laptops</a></li>
+                                        </ul>
+                                        <ul class="blockitems">
+                                            <li><a href="">Intel</a></li>
+                                            <li><a href="">AMD</a></li>
+                                            <li><a href="">nivida</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="block">
+                                        <ul class="blockitems">
+                                            <li><a href="">HP-Laptops</a></li>
+                                            <li><a href="">Dell-Laptops</a></li>
+                                            <li><a href="">Lenova-Laptops</a></li>
+                                        </ul>
+                                        <ul class="blockitems">
+                                            <li><a href="">Intel</a></li>
+                                            <li><a href="">AMD</a></li>
+                                            <li><a href="">nivida</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="rightblock">
+                                    <div class="block">
+                                        <img src="Phone1.jpg" />
+                                        <p>Choose the right Laptop</p>
+                                        <p><a href="">Shop by need</a></p>
+                                    </div>
+                                    <div class="block">
+                                        <img src="Phone2.jpg" />
+                                        <p>High Capacity Memory Card</p>
+                                        <p><a href="">See More .... !</a></p>
+                                    </div>
+                                    <div class="block">
+                                        <img src="Phone3.jpg" />
+                                        <p>High Capacity Hard Disk</p>
+                                        <p><a href="">See More .... !</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="">TV's</a></li>
+                        <li><a href="">Cameras</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+
+    </body>
+</html>

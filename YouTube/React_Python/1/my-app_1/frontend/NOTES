@@ -1,0 +1,5 @@
+● Create a file with the name of ".env" inside frontend folder.
+REACT_APP_API_URL=http://50.19.8.248:5000
+
+● In a "App.js" file inside src/frontend folder.
+fetch('${process.env.REACT_APP_API_URL}/api/greet')

@@ -1,0 +1,4 @@
+Array of Objects is an array where each element is an object containing related properties.
+
+Array of Objects → collection of structured records
+Array of Objects :- [{name:"Arun", age: 25}, {name:"Rahul", age: 26}]

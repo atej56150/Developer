@@ -1,0 +1,20 @@
+In a traditional website, when you move from one page to another :-
+Home → Server → New HTML page → Browser reload
+
+In React SPA :-
+React Application → One HTML page → JavaScript changes the UI → No full page reload
+
+For example :-
+My React App
+     |
+     ├── Home
+     ├── About
+     └── Contact
+
+When the user clicks About, React can display :-
+About Page
+
+So that without completely reloading the browser page.
+
+Simple Example :- SPA Code
+Real applications normally use React Router for navigation.
